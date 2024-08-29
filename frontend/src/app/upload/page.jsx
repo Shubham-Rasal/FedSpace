@@ -99,6 +99,7 @@ export default function Dashboard() {
           setEncrypting(true);
 
           const { ciphertext, dataToEncryptHash } = await encryptRunServerMode(metadataRes.data.IpfsHash);
+          console.log(ciphertext, dataToEncryptHash)
 
           setEncrypting(false);
         }

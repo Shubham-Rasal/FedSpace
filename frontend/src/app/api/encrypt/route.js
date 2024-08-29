@@ -1,5 +1,5 @@
 import LitJsSdk from "@lit-protocol/lit-node-client";
-import LitNetwork from "@lit-protocol/constants";
+import { LitNetwork } from "@lit-protocol/constants";
 import { disconnectWeb3, encryptString, decryptToString, LitNodeClient } from "@lit-protocol/lit-node-client";
 import { Wallet } from "ethers";
 import {
@@ -160,7 +160,7 @@ export async function POST(req) {
     try {
 
         const client = new LitJsSdk.LitNodeClient({
-            litNetwork: LitNetwork.LitNetwork.Cayenne,
+            litNetwork: LitNetwork.DatilDev,
             debug: true,
         });
 

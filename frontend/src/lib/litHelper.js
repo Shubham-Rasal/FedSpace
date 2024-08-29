@@ -8,7 +8,7 @@ import {
     generateAuthSig,
 } from "@lit-protocol/auth-helpers"
 import LitJsSdk from "@lit-protocol/lit-node-client";
-import LitNetwork from "@lit-protocol/constants";
+import { LitNetwork } from "@lit-protocol/constants";
 
 export class Lit {
     litNodeClient;
@@ -156,7 +156,7 @@ export class Lit {
 
 export const encryptRunServerMode = async (message) => {
     const client = new LitJsSdk.LitNodeClient({
-        litNetwork: LitNetwork.LitNetwork.Cayenne,
+        litNetwork: LitNetwork.DatilDev,
         debug: true,
     });
 
@@ -193,9 +193,9 @@ export const encryptRunServerMode = async (message) => {
 }
 
 
-export const decryptRunServerMode = async (dataToEncryptHash,ciphertext ) => {
+export const decryptRunServerMode = async (dataToEncryptHash, ciphertext) => {
     const client = new LitJsSdk.LitNodeClient({
-        litNetwork: LitNetwork.LIT_NETWORKS.cayenne,
+        litNetwork: LitNetwork.DatilDev,
         debug: true,
     });
 
